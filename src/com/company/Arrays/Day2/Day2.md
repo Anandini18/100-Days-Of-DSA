@@ -1,4 +1,4 @@
-> Day 2
+ #Day 2
 - [x] Union & Intersection Of 2 Arrays
     - By 2-Pointer Approach
     - Brute Force : ```O((M+N)log(M+N))```

@@ -1,4 +1,4 @@
-> ##Day 1
+> # Day 1
 - [x] Reverse the Array
     - By Iterative Method 
     - By Recursion : O(N)

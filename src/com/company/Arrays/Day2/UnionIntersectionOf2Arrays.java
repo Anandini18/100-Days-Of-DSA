@@ -2,6 +2,7 @@ package com.company.Arrays.Day2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class UnionIntersectionOf2Arrays {
     public static void main(String[] args) {
@@ -10,12 +11,14 @@ public class UnionIntersectionOf2Arrays {
 
         System.out.println(UnionCount(arr1, arr2));
         System.out.println(Union(arr1, arr2));
+        System.out.println(UnionHashing(arr1,arr2));
         System.out.println(Intersection(arr1, arr2));
     }
 
     // 2-pointer approach
 
-    // TC -> O(m+n) -> If the array is given sorted.
+    // TC -> O(m+n) -> If the array is given sorted, else
+    // SC -> O((m+n)log(m+n))
     // (Use  " union.get(union.size()-1)!=nums1[a] " instead of " !union.contains(nums1[a]) " ) for O(m+n) complexity as,
     // list.contains() requires O(n) time to perform.
     // SC -> O(1)
@@ -41,19 +44,16 @@ public class UnionIntersectionOf2Arrays {
             }
         }
 
-        if (a == nums1.length) {
             while (b < nums2.length) {
                 if (!union.contains(nums2[b])) union.add(nums2[b]);
                 b++;
             }
-        }
 
-        if (b == nums2.length) {
             while (a < nums1.length) {
                 if (!union.contains(nums1[a])) union.add(nums1[a]);
                 a++;
             }
-        }
+
         return union;
     }
 
@@ -82,6 +82,20 @@ public class UnionIntersectionOf2Arrays {
             count++;
         }
         return count;
+    }
+
+    // Hashing method
+    // TC -> O(m+n)
+    // SC -> O(m+n)
+    public static int UnionHashing(int[] arr1,int[] arr2){
+        HashSet<Integer> unionSet = new HashSet<>();
+        for(int i:arr1){
+          unionSet.add(i);
+        }
+        for(int i: arr2){
+            unionSet.add(i);
+        }
+        return unionSet.size();
     }
 
     public static ArrayList<Integer> Intersection(int[] nums1, int[] nums2) {

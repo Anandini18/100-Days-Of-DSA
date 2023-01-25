@@ -1,4 +1,4 @@
-package com.company.Arrays.Day16;
+package com.company.Matrix.Day16;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.company.Matrix.Day19;
+package com.company.Matrix;
 
 public class SpecificPairMatrix {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.company.Matrix.Day17;
+package com.company.Matrix;
 
 public class MaxOnesRow {
     public static void main(String[] args) {

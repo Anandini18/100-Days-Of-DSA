@@ -1,4 +1,4 @@
-package com.company.Arrays;
+package com.company.Strings;
 
 public class ValidPalindrome {
     public static void main(String[] args) {
